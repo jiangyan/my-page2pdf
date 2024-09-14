@@ -7,13 +7,13 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { X } from 'lucide-react'
+import * as THREE from 'three'
 
 function Duck() {
-  // const gltf = useLoader(GLTFLoader, 'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/duck/model.gltf')
   const gltf = useLoader(GLTFLoader, '/assets/3d/duck.glb')
-  const meshRef = useRef()
+  const meshRef = useRef<THREE.Object3D>(null)
 
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.005
     }

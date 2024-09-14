@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { X } from 'lucide-react'
